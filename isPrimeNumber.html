@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+<h1>Check Prime Number</h1>
+<p id="result"></p>
+<script>
+    function isPrime(num) {
+        var num;
+        var check = true;
+        for(var i = 2; i <= num/2; i++) {
+            if(num %i===0){
+                check = false;
+                break;
+            }
+        }
+       return check;
+    }
+    var Number = parseInt(prompt("Nhap so "));
+    var N = 2;
+    var count = 0;
+    while (N < Number) {
+        if (isPrime(N)) {
+            document.write(N+ ","+ " ");
+            count ++;
+            N++;
+        }else {
+            N++;
+        }
+    }
+    document.getElementById("result").innerHTML = "So luong so nguyen to can tim la:" +" " + count;
+
+
+</script>
+</body>
+</html>
